@@ -1,0 +1,126 @@
+<!-- !DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TPP On Boarding</title>
+</head>
+<body>
+<h1>Welcome to your new page</h1>
+</body>
+</html-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <title>Update</title>
+</head>
+<body>
+<div class="container">
+    <div class="row main">
+        <div class="main-login main-center">
+            <h5>Update Uber Drive</h5>
+            <form class="" th:action="@{/update}" th:object="${bean}" method="post">
+
+                <div class="form-group">
+                   <label for="id" class="cols-sm-2 control-label">ID</label>
+                   <div class="cols-sm-10">
+                       <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-address-card " aria-hidden="true"></i></span>
+                           <input type="text" class="form-control" name="id" id="id" th:field="*{id}"  placeholder="Enter Start Date"/>
+                       </div>
+                   </div>
+               </div>
+
+                 <div class="form-group">
+                    <label for="category" class="cols-sm-2 control-label">Category</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user-secret fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="category" id="category" th:field="*{category}"  placeholder="Enter Category"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="StartDestination" class="cols-sm-2 control-label">Start Destination</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-link fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="StartDestination" id="StartDestination" th:field="*{start}"  placeholder="Enter your Start Destination"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="StopDestination" class="cols-sm-2 control-label">Stop Destination</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-link fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="StopDestination" id="StopDestination" th:field="*{stop}"  placeholder="Enter your Stop Destination"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Miles" class="cols-sm-2 control-label">Miles</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-link fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="Miles" id="Miles" th:field="*{miles}"  placeholder="Enter the miles"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Purpose" class="cols-sm-2 control-label">Purpose</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-link fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="Purpose" id="Purpose" th:field="*{purpose}"  placeholder="Enter the purpose Destination"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <input type="submit" name="user" value="Update" id="button" class="btn btn-primary btn-lg btn-block login-button" />
+
+                </div>
+
+                <div class="form-group" th:if="${failure}">
+                    <label  class="cols-sm-2 control-label">Oops! There was an error</label>
+
+                </div>
+
+                <div class="form-group" th:if="${success}">
+                    <label for="button" class="cols-sm-2 control-label">Item updated successfully</label>
+                    <input type="button" name="user" value="Home" id="button" onclick="location.href='/'" class="btn btn-primary btn-lg btn-block login-button" />
+                </div>
+
+
+            </form>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+</body>
+</html>
